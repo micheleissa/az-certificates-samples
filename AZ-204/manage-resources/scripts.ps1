@@ -85,3 +85,6 @@ Get-AzNetworkSecurityGroup -ResourceGroup $vm.ResourceGroupName | Remove-AzNetwo
 
 # Delete the publis IP associated with the VM
 Get-AzPublicIpAddress -ResourceGroup $vm.ResourceGroupName | Remove-AzPublicIpAddress -Force
+
+# Move resources from one RG to another
+az resource move --destination-group $dest-rg --ids $yourResource
